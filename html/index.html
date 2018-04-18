@@ -12,14 +12,14 @@
 <div id="yksikkomuunnin">
     <div id="nav">
         <ul>
-            <li v-on:click="setType('paino')">Paino</li>
-            <li v-on:click="setType('pituus')">Pituus</li>
-            <li v-on:click="setType('valuutta')">Valuutta</li>
+            <button v-on:click="setType('paino')">Paino</button>
+            <button v-on:click="setType('pituus')">Pituus</button>
+            <button v-on:click="setType('valuutta')">Valuutta</button>
         </ul>
     </div>
     <div id="muunninbody">
         <div id="painomuunnin" v-if="type === 'paino'">
-            paino
+            <painomuunnin></painomuunnin>
         </div>
         <div id="pituusmuunnin" v-else-if="type === 'pituus'">
             pituus
