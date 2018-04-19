@@ -3,29 +3,29 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Yksikkömuunnin</title>
+    <title>Unit converter</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="../js/yksikkomuunnin.js"></script>
     <link rel="stylesheet" href="../css/oma.css">
 </head>
 <body>
-<div id="yksikkomuunnin">
+<div id="converter">
     <div id="nav">
         <ul>
-            <button v-on:click="setType('paino')">Paino</button>
-            <button v-on:click="setType('pituus')">Pituus</button>
-            <button v-on:click="setType('valuutta')">Valuutta</button>
+            <button v-on:click="setType('weight')">Weight</button>
+            <button v-on:click="setType('length')">Length</button>
+            <button v-on:click="setType('currency')">Currency</button>
         </ul>
     </div>
-    <div id="muunninbody">
-        <div id="painomuunnin" v-if="type === 'paino'">
-            <painomuunnin></painomuunnin>
+    <div id="converterbody">
+        <div id="weightconverter" v-if="type === 'weight'">
+            <weightconverter></weightconverter>
         </div>
-        <div id="pituusmuunnin" v-else-if="type === 'pituus'">
-            pituus
+        <div id="lengthconverter" v-else-if="type === 'length'">
+            <lengthconverter></lengthconverter>
         </div>
-        <div id="valuuttamuunnin" v-else-if="type === 'valuutta'">
-            valuutta
+        <div id="currencyconverter" v-else-if="type === 'currency'">
+            currency
         </div>
     </div>
 </div>
