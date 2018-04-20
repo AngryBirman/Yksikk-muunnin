@@ -18,15 +18,17 @@
         </ul>
     </div>
     <div id="converterbody">
-        <div id="weightconverter" v-if="type === 'weight'">
+        <transition name="fade" mode="out-in">
+        <div id="weightconverter" v-if="type === 'weight'" key="weight" class="converter">
             <weightconverter></weightconverter>
         </div>
-        <div id="lengthconverter" v-else-if="type === 'length'">
+        <div id="lengthconverter" v-else-if="type === 'length'" key="length" class="converter">
             <lengthconverter></lengthconverter>
         </div>
-        <div id="currencyconverter" v-else-if="type === 'currency'">
+        <div id="currencyconverter" v-else-if="type === 'currency'" key="currency" class="converter">
             currency
         </div>
+        </transition>
     </div>
 </div>
 </body>
