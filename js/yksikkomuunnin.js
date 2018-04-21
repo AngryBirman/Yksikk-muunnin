@@ -194,4 +194,97 @@ window.onload = function () {
         </div>`
     
     });
+
+    Vue.component('volumeconverter', {
+        data: function () {
+            return {
+                types: {
+                    liter: 'Liter',
+                    milliliter: 'Milliliter',
+                    cubicmeter: 'Cubic meter',
+                    cubickilometer: 'Cubic kilometer',
+                    cubiccentimeter: 'Cubic centimeter',
+                    cubicmillimeter: 'Cubic millimeter',
+                    cubicinch: 'Cubic inch',
+                    cubicfoot: 'Cubic foot',
+                    cubicyard: 'Cubic yard',
+                    cubicmile: 'Cubic mile'
+                },
+                amount: "",
+                from: "",
+                to: "",
+                volumeRatios: {
+                    Liter: {
+                        'Liter': 1, 'Milliliter': 1000, 'Cubic meter': 0.001, 'Cubic kilometer': 0.000000000001, 'Cubic centimeter': 1000,
+                        'Cubic millimeter': 1000000, 'Cubic inch': 61.023744095, 'Cubic foot': 0.0353146667, 'Cubic yard': 0.0013079506, 'Cubic mile': 0.0000000000002399127585
+                    },
+                    Milliliter: {
+                        'Liter': 0.001, 'Milliliter': 1, 'Cubic meter': 0.000001, 'Cubic kilometer': 0.000000000000001, 'Cubic centimeter': 1,
+                        'Cubic millimeter': 1000, 'Cubic inch': 0.0610237441, 'Cubic foot': 0.0000353147, 'Cubic yard': 0.000001308, 'Cubic mile': 0.0000000000000002399127585
+                    },
+                    Cubicmeter: {
+                        'Liter': 1000, 'Milliliter': 1000000, 'Cubic meter': 1, 'Cubic kilometer': 0.000000001, 'Cubic centimeter': 1000000,
+                        'Cubic millimeter': 1000000000, 'Cubic inch': 61023.744095, 'Cubic foot': 35.314666721, 'Cubic yard': 1.3079506193, 'Cubic mile': 0.0000000002399127585
+                    },
+                    Cubickilometer: {
+                        'Liter': 1000000000000, 'Milliliter': 1000000000000000, 'Cubic meter': 1000000000, 'Cubic kilometer': 1, 'Cubic centimeter': 1000000000000000,
+                        'Cubic millimeter': 1000000000000000000, 'Cubic inch': 61023744094732, 'Cubic foot': 35314666721, 'Cubic yard': 1307950619.3, 'Cubic mile': 0.2399127586
+                    },
+                    Cubiccentimeter: {
+                        'Liter': 0.001, 'Milliliter': 1, 'Cubic meter': 0.000001, 'Cubic kilometer': 0.000000000000001, 'Cubic centimeter': 1,
+                        'Cubic millimeter': 1000, 'Cubic inch': 0.0610237441, 'Cubic foot': 0.0000353147, 'Cubic yard': 0.000001308, 'Cubic mile': 0.0000000000000002399127585
+                    },
+                    Cubicmillimeter: {
+                        'Liter': 0.000001, 'Milliliter': 0.001, 'Cubic meter': 0.000000001, 'Cubic kilometer': 0.000000000000000001, 'Cubic centimeter': 0.001,
+                        'Cubic millimeter': 1, 'Cubic inch': 0.0000610237, 'Cubic foot': 0.00000003531466672, 'Cubic yard': 0.000000001307950619, 'Cubic mile': 0.0000000000000000002399127585
+                    },
+                    Cubicinch: {
+                        'Liter': 0.016387064, 'Milliliter': 16.387064, 'Cubic meter': 0.0000163871, 'Cubic kilometer': 0.000000000000016387064, 'Cubic centimeter': 16.387064,
+                        'Cubic millimeter': 16387.064, 'Cubic inch': 1, 'Cubic foot': 0.0005787037, 'Cubic yard': 0.0000214335, 'Cubic mile': 0.000000000000003931465729
+                    },
+                    Cubicfoot: {
+                        'Liter': 28.316846592, 'Milliliter': 28316.846592, 'Cubic meter': 0.0283168466, 'Cubic kilometer': 0.00000000002831684659, 'Cubic centimeter': 28316.846592,
+                        'Cubic millimeter': 28316846.592, 'Cubic inch': 1728, 'Cubic foot': 1, 'Cubic yard': 0.037037037, 'Cubic mile': 0.00000000000679357278
+                    },
+                    Cubicyard: {
+                        'Liter': 764.55485798, 'Milliliter': 764554.85798, 'Cubic meter': 0.764554858, 'Cubic kilometer': 0.0000000007645548579, 'Cubic centimeter': 764554.85798,
+                        'Cubic millimeter': 764554857.98, 'Cubic inch': 46656, 'Cubic foot': 27, 'Cubic yard': 1, 'Cubic mile': 0.000000000183426465
+                    },
+                    Cubicmile: {
+                        'Liter': 4168181825441, 'Milliliter': 4168181825440540, 'Cubic meter': 4168181825.4, 'Cubic kilometer': 4.1681818254, 'Cubic centimeter': 4168181825440540,
+                        'Cubic millimeter': 4168181825440539600, 'Cubic inch': 254358061055996, 'Cubic foot': 147197952000, 'Cubic yard': 5451776000, 'Cubic mile': 1
+                    },
+                }
+            }
+        },
+        methods: {
+            result: function () {
+                for (var type in this.volumeRatios) {
+                    if (this.volumeRatios.hasOwnProperty(type)) {
+                        if (type === this.from) {
+                            for (ratio in this.volumeRatios[type]) {
+                                if (this.volumeRatios[type].hasOwnProperty(ratio)) {
+                                    if (ratio === this.to) {
+                                       return this.amount * this.volumeRatios[type][ratio];
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        template: `
+        <div class='input-area'>
+            <input v-model.number="amount" type="number">
+            <select v-model="from">
+            <option v-for='value in types' v-bind:value=value>{{value}}</option>
+            </select>
+            <select v-model="to">
+            <option v-for='value in types' v-bind:value=value>{{value}}</option>
+            </select>
+            <p>{{result()}}</p>
+        </div>`
+    
+    });
 }
