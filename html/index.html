@@ -10,6 +10,8 @@
 </head>
 <body>
 <div id="converter">
+    <h1 class="header">Unit converter</h1>
+    <p class="text">Choose type:</p>
     <div id="nav">
         <ul>
             <button v-on:click="setType('weight')">Weight</button>
@@ -27,7 +29,7 @@
             <lengthconverter></lengthconverter>
         </div>
         <div id="currencyconverter" v-else-if="type === 'currency'" key="currency" class="converter">
-            currency
+            <currencyconverter></currencyconverter>
         </div>
         <div id="volumeconverter" v-else-if="type === 'volume'" key="volume" class="converter">
             <volumeconverter></volumeconverter>
