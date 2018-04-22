@@ -1,5 +1,30 @@
+
+#converter {
+    border-left: 6px solid grey;
+    margin: auto;
+    margin-top: 21%;
+    max-width: 230px;
+}
+
+.header {
+    font-size: 1.5em;
+    font-family: tahoma, sans-serif;
+    text-align: center;
+}
+
+.text {
+    font-family: tahoma, sans-serif;
+    margin-left: 14%;
+}
+
 #nav ul li {
     display: inline;
+}
+
+button {
+    min-width: 73px;
+    padding: 5px 0 5px 0;
+    margin: 2px 0 2px 0;
 }
 
 .converter {
