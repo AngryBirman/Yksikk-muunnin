@@ -103,7 +103,9 @@ window.onload = function () {
             <option v-for='value in types' v-bind:value=value>{{value}}</option>
             </select> <br>
             <h1>Result</h1>
+            <div v-if="amount && from && to">
             <p>{{amount}} {{from}} is {{result()}} {{to}}</p>
+            </div>
         </div>`
     });
 
@@ -200,7 +202,9 @@ window.onload = function () {
             <option v-for='value in types' v-bind:value=value>{{value}}</option>
             </select> <br>
             <h1>Result</h1>
+            <div v-if="amount && from && to">
             <p>{{amount}} {{from}} is {{result()}} {{to}}</p>
+            </div>
         </div>`
     
     });
@@ -278,7 +282,9 @@ window.onload = function () {
             <option v-for='value in types' v-bind:value=value>{{value}}</option>
             </select> <br>
             <h1>Result</h1>
+            <div v-if="amount && from && to">
             <p>{{amount}} {{from}} is {{result()}} {{to}}</p>
+            </div>
         </div>`
 
     });
@@ -375,8 +381,11 @@ window.onload = function () {
             <select v-model="to">
             <option v-for='value in types' v-bind:value=value>{{value}}</option>
             </select> <br>
+            
             <h1>Result</h1>
+            <div v-if="amount && from && to">
             <p>{{amount}} {{from}} is {{result()}} {{to}}</p>
+            </div>
         </div>`
     
     });
