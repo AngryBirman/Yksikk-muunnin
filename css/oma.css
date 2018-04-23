@@ -4,6 +4,7 @@
     margin: auto;
     margin-top: 21%;
     max-width: 230px;
+
 }
 
 .header {
@@ -27,8 +28,15 @@ button {
     margin: 2px 0 2px 0;
 }
 
+#converter-top {
+    background: white;
+    position: relative;
+    z-index: 5;
+}
+
 .converter {
     position: relative;
+    z-index: 1;
     overflow: hidden;
 }
 

@@ -10,15 +10,17 @@
 </head>
 <body>
 <div id="converter">
-    <h1 class="header">Unit converter</h1>
-    <p class="text">Choose type:</p>
-    <div id="nav">
-        <ul>
-            <button v-on:click="setType('weight')">Weight</button>
-            <button v-on:click="setType('length')">Length</button>
-            <button v-on:click="setType('currency')">Currency</button>
-            <button v-on:click="setType('volume')">Volume</button>
-        </ul>
+    <div id="converter-top">
+        <h1 class="header">Unit converter</h1>
+        <p class="text">Choose type:</p>
+        <div id="nav">
+            <ul>
+                <button v-on:click="setType('weight')">Weight</button>
+                <button v-on:click="setType('length')">Length</button>
+                <button v-on:click="setType('currency')">Currency</button>
+                <button v-on:click="setType('volume')">Volume</button>
+            </ul>
+        </div>
     </div>
     <div id="converterbody">
         <transition name="fade" mode="out-in">
