@@ -28,13 +28,23 @@ button {
 }
 
 .converter {
-    position: absolute;
+    position: relative;
+    overflow: hidden;
 }
 
-.fade-enter-active, .fade-leave-active {
-    transition: opacity .5s;
+.fade-enter-active  {
+    animation: slide .5s;
 }
 
-.fade-enter, .fade-leave-to {
-    opacity: 0;
+.fade-leave-active {
+    animation: slide .5s reverse;
+}
+
+@keyframes slide {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 0px;
+    }
 }
