@@ -274,58 +274,58 @@ window.onload = function () {
                 types: {
                     liter: 'Liter',
                     milliliter: 'Milliliter',
-                    cubicmeter: 'Cubic Meter',
-                    cubickilometer: 'Cubic Kilometer',
-                    cubiccentimeter: 'Cubic Centimeter',
-                    cubicmillimeter: 'Cubic Millimeter',
-                    cubicinch: 'Cubic Inch',
-                    cubicfoot: 'Cubic Foot',
-                    cubicyard: 'Cubic Yard',
-                    cubicmile: 'Cubic Mile'
+                    cubicmeter: 'Cubicmeter',
+                    cubickilometer: 'Cubickilometer',
+                    cubiccentimeter: 'Cubiccentimeter',
+                    cubicmillimeter: 'Cubicmillimeter',
+                    cubicinch: 'Cubicinch',
+                    cubicfoot: 'Cubicfoot',
+                    cubicyard: 'Cubicyard',
+                    cubicmile: 'Cubicmile'
                 },
                 amount: "",
                 from: "",
                 to: "",
                 volumeRatios: {
                     Liter: {
-                        'Liter': 1, 'Milliliter': 1000, 'Cubic Meter': 0.001, 'Cubic Kilometer': 0.000000000001, 'Cubic Centimeter': 1000,
-                        'Cubic Millimeter': 1000000, 'Cubic Inch': 61.023744095, 'Cubic Foot': 0.0353146667, 'Cubic Yard': 0.0013079506, 'Cubic Mile': 0.0000000000002399127585
+                        'Liter': 1, 'Milliliter': 1000, 'Cubicmeter': 0.001, 'Cubickilometer': 0.000000000001, 'Cubiccentimeter': 1000,
+                        'Cubicmillimeter': 1000000, 'Cubicinch': 61.023744095, 'Cubicfoot': 0.0353146667, 'Cubicyard': 0.0013079506, 'Cubicmile': 0.0000000000002399127585
                     },
                     Milliliter: {
-                        'Liter': 0.001, 'Milliliter': 1, 'Cubic Meter': 0.000001, 'Cubic Kilometer': 0.000000000000001, 'Cubic Centimeter': 1,
-                        'Cubic Millimeter': 1000, 'Cubic Inch': 0.0610237441, 'Cubic Foot': 0.0000353147, 'Cubic Yard': 0.000001308, 'Cubic Mile': 0.0000000000000002399127585
+                        'Liter': 0.001, 'Milliliter': 1, 'Cubicmeter': 0.000001, 'Cubickilometer': 0.000000000000001, 'Cubiccentimeter': 1,
+                        'Cubicmillimeter': 1000, 'Cubicinch': 0.0610237441, 'Cubicfoot': 0.0000353147, 'Cubicyard': 0.000001308, 'Cubicmile': 0.0000000000000002399127585
                     },
                     Cubicmeter: {
-                        'Liter': 1000, 'Milliliter': 1000000, 'Cubic Meter': 1, 'Cubic Kilometer': 0.000000001, 'Cubic Centimeter': 1000000,
-                        'Cubic Millimeter': 1000000000, 'Cubic Inch': 61023.744095, 'Cubic Foot': 35.314666721, 'Cubic Yard': 1.3079506193, 'Cubic Mile': 0.0000000002399127585
+                        'Liter': 1000, 'Milliliter': 1000000, 'Cubicmeter': 1, 'Cubickilometer': 0.000000001, 'Cubiccentimeter': 1000000,
+                        'Cubicmillimeter': 1000000000, 'Cubicinch': 61023.744095, 'Cubicfoot': 35.314666721, 'Cubicyard': 1.3079506193, 'Cubicmile': 0.0000000002399127585
                     },
                     Cubickilometer: {
-                        'Liter': 1000000000000, 'Milliliter': 1000000000000000, 'Cubic Meter': 1000000000, 'Cubic Kilometer': 1, 'Cubic Centimeter': 1000000000000000,
-                        'Cubic Millimeter': 1000000000000000000, 'Cubic Inch': 61023744094732, 'Cubic Foot': 35314666721, 'Cubic Yard': 1307950619.3, 'Cubic Mile': 0.2399127586
+                        'Liter': 1000000000000, 'Milliliter': 1000000000000000, 'Cubicmeter': 1000000000, 'Cubickilometer': 1, 'Cubiccentimeter': 1000000000000000,
+                        'Cubicmillimeter': 1000000000000000000, 'Cubicinch': 61023744094732, 'Cubicfoot': 35314666721, 'Cubicyard': 1307950619.3, 'Cubicmile': 0.2399127586
                     },
                     Cubiccentimeter: {
-                        'Liter': 0.001, 'Milliliter': 1, 'Cubic Meter': 0.000001, 'Cubic Kilometer': 0.000000000000001, 'Cubic Centimeter': 1,
-                        'Cubic Millimeter': 1000, 'Cubic Inch': 0.0610237441, 'Cubic Foot': 0.0000353147, 'Cubic Yard': 0.000001308, 'Cubic Mile': 0.0000000000000002399127585
+                        'Liter': 0.001, 'Milliliter': 1, 'Cubicmeter': 0.000001, 'Cubickilometer': 0.000000000000001, 'Cubiccentimeter': 1,
+                        'Cubicmillimeter': 1000, 'Cubicinch': 0.0610237441, 'Cubicfoot': 0.0000353147, 'Cubicyard': 0.000001308, 'Cubicmile': 0.0000000000000002399127585
                     },
                     Cubicmillimeter: {
-                        'Liter': 0.000001, 'Milliliter': 0.001, 'Cubic Meter': 0.000000001, 'Cubic Kilometer': 0.000000000000000001, 'Cubic Centimeter': 0.001,
-                        'Cubic Millimeter': 1, 'Cubic Inch': 0.0000610237, 'Cubic Foot': 0.00000003531466672, 'Cubic Yard': 0.000000001307950619, 'Cubic Mile': 0.0000000000000000002399127585
+                        'Liter': 0.000001, 'Milliliter': 0.001, 'Cubicmeter': 0.000000001, 'Cubickilometer': 0.000000000000000001, 'Cubiccentimeter': 0.001,
+                        'Cubicmillimeter': 1, 'Cubicinch': 0.0000610237, 'Cubicfoot': 0.00000003531466672, 'Cubicyard': 0.000000001307950619, 'Cubicmile': 0.0000000000000000002399127585
                     },
                     Cubicinch: {
-                        'Liter': 0.016387064, 'Milliliter': 16.387064, 'Cubic Meter': 0.0000163871, 'Cubic Kilometer': 0.000000000000016387064, 'Cubic Centimeter': 16.387064,
-                        'Cubic Millimeter': 16387.064, 'Cubic Inch': 1, 'Cubic Foot': 0.0005787037, 'Cubic Yard': 0.0000214335, 'Cubic Mile': 0.000000000000003931465729
+                        'Liter': 0.016387064, 'Milliliter': 16.387064, 'Cubicmeter': 0.0000163871, 'Cubickilometer': 0.000000000000016387064, 'Cubiccentimeter': 16.387064,
+                        'Cubicmillimeter': 16387.064, 'Cubicinch': 1, 'Cubicfoot': 0.0005787037, 'Cubicyard': 0.0000214335, 'Cubicmile': 0.000000000000003931465729
                     },
                     Cubicfoot: {
-                        'Liter': 28.316846592, 'Milliliter': 28316.846592, 'Cubic Meter': 0.0283168466, 'Cubic Kilometer': 0.00000000002831684659, 'Cubic Centimeter': 28316.846592,
-                        'Cubic Millimeter': 28316846.592, 'Cubic Inch': 1728, 'Cubic Foot': 1, 'Cubic Yard': 0.037037037, 'Cubic Mile': 0.00000000000679357278
+                        'Liter': 28.316846592, 'Milliliter': 28316.846592, 'Cubicmeter': 0.0283168466, 'Cubickilometer': 0.00000000002831684659, 'Cubiccentimeter': 28316.846592,
+                        'Cubicmillimeter': 28316846.592, 'Cubicinch': 1728, 'Cubicfoot': 1, 'Cubicyard': 0.037037037, 'Cubicmile': 0.00000000000679357278
                     },
                     Cubicyard: {
-                        'Liter': 764.55485798, 'Milliliter': 764554.85798, 'Cubic Meter': 0.764554858, 'Cubic Kilometer': 0.0000000007645548579, 'Cubic Centimeter': 764554.85798,
-                        'Cubic Millimeter': 764554857.98, 'Cubic Inch': 46656, 'Cubic Foot': 27, 'Cubic Yard': 1, 'Cubic Mile': 0.000000000183426465
+                        'Liter': 764.55485798, 'Milliliter': 764554.85798, 'Cubicmeter': 0.764554858, 'Cubickilometer': 0.0000000007645548579, 'Cubiccentimeter': 764554.85798,
+                        'Cubicmillimeter': 764554857.98, 'Cubicinch': 46656, 'Cubicfoot': 27, 'Cubicyard': 1, 'Cubicmile': 0.000000000183426465
                     },
                     Cubicmile: {
-                        'Liter': 4168181825441, 'Milliliter': 4168181825440540, 'Cubic Meter': 4168181825.4, 'Cubic Kilometer': 4.1681818254, 'Cubic Centimeter': 4168181825440540,
-                        'Cubic Millimeter': 4168181825440539600, 'Cubic Inch': 254358061055996, 'Cubic Foot': 147197952000, 'Cubic Yard': 5451776000, 'Cubic Mile': 1
+                        'Liter': 4168181825441, 'Milliliter': 4168181825440540, 'Cubicmeter': 4168181825.4, 'Cubickilometer': 4.1681818254, 'Cubiccentimeter': 4168181825440540,
+                        'Cubicmillimeter': 4168181825440539600, 'Cubicinch': 254358061055996, 'Cubicfoot': 147197952000, 'Cubicyard': 5451776000, 'Cubicmile': 1
                     },
                 }
             }
