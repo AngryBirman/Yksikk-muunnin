@@ -199,40 +199,40 @@ window.onload = function () {
         data: function () {
             return {
                 types: {
-                    usdollar: 'US Dollar',
+                    usdollar: 'USDollar',
                     euro: 'Euro',
-                    britishpound: 'British Pound',
-                    indianrupee: 'Indian Rupee',
-                    australiandollar: 'Australian Dollar',
-                    canadiandollar: 'Canadian Dollar',
+                    britishpound: 'BritishPound',
+                    indianrupee: 'IndianRupee',
+                    australiandollar: 'AustralianDollar',
+                    canadiandollar: 'CanadianDollar',
                 },
                 amount: "",
                 from: "",
                 to: "",
                 currencyRatios: {
                     USDollar: {
-                        'US Dollar': 1, 'Euro': 0.81366, 'British Pound': 0.71385, 'Indian Rupee': 66.1140, 'Australian Dollar': 1.30303,
-                        'Canadian Dollar': 1.27590
+                        'USDollar': 1, 'Euro': 0.81366, 'BritishPound': 0.71385, 'IndianRupee': 66.1140, 'AustralianDollar': 1.30303,
+                        'CanadianDollar': 1.27590
                     },
                     Euro: {
-                        'US Dollar': 1.22841, 'Euro': 1, 'British Pound': 0.87707, 'Indian Rupee': 81.2151, 'Australian Dollar': 1.60101,
-                        'Canadian Dollar': 1.56733
+                        'USDollar': 1.22841, 'Euro': 1, 'BritishPound': 0.87707, 'IndianRupee': 81.2151, 'AustralianDollar': 1.60101,
+                        'CanadianDollar': 1.56733
                     },
                     BritishPound: {
-                        'US Dollar': 1.39996, 'Euro': 1.13886, 'British Pound': 1, 'Indian Rupee': 92.5570, 'Australian Dollar': 1.82419,
-                        'Canadian Dollar': 1.78621
+                        'USDollar': 1.39996, 'Euro': 1.13886, 'BritishPound': 1, 'IndianRupee': 92.5570, 'AustralianDollar': 1.82419,
+                        'CanadianDollar': 1.78621
                     },
                     IndianRupee: {
-                        'US Dollar': 0.01507, 'Euro': 0.01226, 'British Pound': 0.01076, 'Indian Rupee': 1, 'Australian Dollar': 0.01963,
-                        'Canadian Dollar': 0.01923
+                        'USDollar': 0.01507, 'Euro': 0.01226, 'BritishPound': 0.01076, 'IndianRupee': 1, 'AustralianDollar': 0.01963,
+                        'CanadianDollar': 0.01923
                     },
                     AustralianDollar: {
-                        'US Dollar': 0.76664, 'Euro': 0.62383, 'British Pound': 0.54726, 'Indian Rupee': 50.6856, 'Australian Dollar': 1,
-                        'Canadian Dollar': 0.97816
+                        'USDollar': 0.76664, 'Euro': 0.62383, 'BritishPound': 0.54726, 'IndianRupee': 50.6856, 'AustralianDollar': 1,
+                        'CanadianDollar': 0.97816
                     },
                     CanadianDollar: {
-                        'US Dollar': 0.78284, 'Euro': 0.63697, 'British Pound': 0.55883, 'Indian Rupee': 51.7567, 'Australian Dollar': 1.02007,
-                        'Canadian Dollar': 1
+                        'USDollar': 0.78284, 'Euro': 0.63697, 'BritishPound': 0.55883, 'IndianRupee': 51.7567, 'AustralianDollar': 1.02007,
+                        'CanadianDollar': 1
                     },
                 }
             }
