@@ -2,7 +2,7 @@
 #converter {
     border-left: 6px solid grey;
     margin: auto;
-    margin-top: 21%;
+    margin-top: 10%;
     max-width: 230px;
 
 }
@@ -23,9 +23,23 @@
 }
 
 button {
-    min-width: 73px;
+    min-width: 85px;
     padding: 5px 0 5px 0;
-    margin: 2px 0 2px 0;
+    margin: 5px 2px 5px 2px;
+    background-color: green;
+    border: none;
+    color: black;
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: impact, sans-serif;
+}
+
+input, select {
+    width: 90%;
+}
+
+.input-area {
+    margin-left: 40px;
 }
 
 #converter-top {

@@ -91,14 +91,19 @@ window.onload = function () {
         },
         template: `
         <div class='input-area'>
-            <input v-model.number="amount" type="number">
+        <h2>Weight converter</h2>
+        <p>Input number:</p>
+            <input v-model.number="amount" type="number"> <br>
+            <p>Choose from weight:</p>
             <select v-model="from">
             <option v-for='value in types' v-bind:value=value>{{value}}</option>
-            </select>
+            </select> <br>
+            <p>Choose to weight:</p>
             <select v-model="to">
             <option v-for='value in types' v-bind:value=value>{{value}}</option>
-            </select>
-            <p>{{result()}}</p>
+            </select> <br>
+            <h1>Result</h1>
+            <p>{{amount}} {{from}} is {{result()}} {{to}}</p>
         </div>`
     });
 
@@ -183,14 +188,19 @@ window.onload = function () {
         },
         template: `
         <div class='input-area'>
-            <input v-model.number="amount" type="number">
+        <h2>Length converter</h2>
+        <p>Input number:</p>
+            <input v-model.number="amount" type="number"> <br>
+            <p>Choose from length:</p>
             <select v-model="from">
             <option v-for='value in types' v-bind:value=value>{{value}}</option>
-            </select>
+            </select> <br>
+            <p>Choose to length:</p>
             <select v-model="to">
             <option v-for='value in types' v-bind:value=value>{{value}}</option>
-            </select>
-            <p>{{result()}}</p>
+            </select> <br>
+            <h1>Result</h1>
+            <p>{{amount}} {{from}} is {{result()}} {{to}}</p>
         </div>`
     
     });
@@ -256,14 +266,19 @@ window.onload = function () {
         },
         template: `
         <div class='input-area'>
-            <input v-model.number="amount" type="number">
+        <h2>Currency converter</h2>
+        <p>Input number:</p>
+            <input v-model.number="amount" type="number"> <br>
+            <p>Choose from currency:</p>
             <select v-model="from">
             <option v-for='value in types' v-bind:value=value>{{value}}</option>
-            </select>
+            </select> <br>
+            <p>Choose to currency:</p>
             <select v-model="to">
             <option v-for='value in types' v-bind:value=value>{{value}}</option>
-            </select>
-            <p>{{result()}}</p>
+            </select> <br>
+            <h1>Result</h1>
+            <p>{{amount}} {{from}} is {{result()}} {{to}}</p>
         </div>`
 
     });
@@ -349,14 +364,19 @@ window.onload = function () {
         },
         template: `
         <div class='input-area'>
-            <input v-model.number="amount" type="number">
+        <h2>Volume converter</h2>
+        <p>Input number:</p>
+            <input v-model.number="amount" type="number"> <br>
+            <p>Choose from volume:</p>
             <select v-model="from">
             <option v-for='value in types' v-bind:value=value>{{value}}</option>
-            </select>
+            </select> <br>
+            <p>Choose to volume:</p>
             <select v-model="to">
             <option v-for='value in types' v-bind:value=value>{{value}}</option>
-            </select>
-            <p>{{result()}}</p>
+            </select> <br>
+            <h1>Result</h1>
+            <p>{{amount}} {{from}} is {{result()}} {{to}}</p>
         </div>`
     
     });
