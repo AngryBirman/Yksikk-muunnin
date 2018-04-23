@@ -43,7 +43,6 @@ input, select {
 }
 
 #converter-top {
-    background: white;
     position: relative;
     z-index: 5;
 }
@@ -64,6 +63,7 @@ input, select {
 
 @keyframes slide {
     0% {
+        height: 0;
         top: -100px;
     }
     100% {
