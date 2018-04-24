@@ -30,6 +30,7 @@ window.onload = function () {
                 amount: "",
                 from: "",
                 to: "",
+                tweenedTotal: 0,
                 weightRatios: {
                     Kilogram: {
                         'Kilogram': 1, 'Ton': 0.001, 'Gram': 1000, 'Milligram': 1000000, 'Microgram': 1000000000,
@@ -72,7 +73,15 @@ window.onload = function () {
                 }
             }
         },
-        methods: {
+        watch: {
+            result: function(newValue) {
+                TweenLite.to(this.$data, 0.5, { tweenedTotal: newValue });
+            }
+        },
+        computed: {
+            animatedTotal: function() {
+                return this.tweenedTotal.toFixed(3);
+            },
             result: function () {
                 for (var type in this.weightRatios) {
                     if (this.weightRatios.hasOwnProperty(type)) {
@@ -80,7 +89,8 @@ window.onload = function () {
                             for (ratio in this.weightRatios[type]) {
                                 if (this.weightRatios[type].hasOwnProperty(ratio)) {
                                     if (ratio === this.to) {
-                                        return this.amount * this.weightRatios[type][ratio];
+                                        var number = this.amount * this.weightRatios[type][ratio];
+                                        return number;
                                     }
                                 }
                             }
@@ -104,7 +114,7 @@ window.onload = function () {
             </select> <br>
             <h1>Result</h1>
             <div v-if="amount && from && to">
-            <p>{{amount}} {{from}} is {{result()}} {{to}}</p>
+            <p>{{amount}} {{from}} is {{animatedTotal}} {{to}}</p>
             </div>
         </div>`
     });
@@ -127,6 +137,7 @@ window.onload = function () {
                 amount: "",
                 from: "",
                 to: "",
+                tweenedTotal: 0,
                 lengthRatios: {
                     Metre: {
                         'Metre': 1, 'Decimetre': 10, 'Centimetre': 100, 'Millimetre': 1000, 'Hectometre': 0.01,
@@ -171,7 +182,15 @@ window.onload = function () {
                 }
             }
         },
-        methods: {
+        watch: {
+            result: function(newValue) {
+                TweenLite.to(this.$data, 0.5, { tweenedTotal: newValue });
+            }
+        },
+        computed: {
+            animatedTotal: function() {
+                return this.tweenedTotal.toFixed(3);
+            },
             result: function () {
                 for (var type in this.lengthRatios) {
                     if (this.lengthRatios.hasOwnProperty(type)) {
@@ -203,7 +222,7 @@ window.onload = function () {
             </select> <br>
             <h1>Result</h1>
             <div v-if="amount && from && to">
-            <p>{{amount}} {{from}} is {{result()}} {{to}}</p>
+            <p>{{amount}} {{from}} is {{animatedTotal}} {{to}}</p>
             </div>
         </div>`
     
@@ -223,6 +242,7 @@ window.onload = function () {
                 amount: "",
                 from: "",
                 to: "",
+                tweenedTotal: 0,
                 currencyRatios: {
                     USDollar: {
                         'USDollar': 1, 'Euro': 0.81366, 'BritishPound': 0.71385, 'IndianRupee': 66.1140, 'AustralianDollar': 1.30303,
@@ -251,7 +271,15 @@ window.onload = function () {
                 }
             }
         },
-        methods: {
+        watch: {
+            result: function(newValue) {
+                TweenLite.to(this.$data, 0.5, { tweenedTotal: newValue });
+            }
+        },
+        computed: {
+            animatedTotal: function() {
+                return this.tweenedTotal.toFixed(3);
+            },
             result: function () {
                 for (var type in this.currencyRatios) {
                     if (this.currencyRatios.hasOwnProperty(type)) {
@@ -283,7 +311,7 @@ window.onload = function () {
             </select> <br>
             <h1>Result</h1>
             <div v-if="amount && from && to">
-            <p>{{amount}} {{from}} is {{result()}} {{to}}</p>
+            <p>{{amount}} {{from}} is {{animatedTotal}} {{to}}</p>
             </div>
         </div>`
 
@@ -307,6 +335,7 @@ window.onload = function () {
                 amount: "",
                 from: "",
                 to: "",
+                tweenedTotal: 0,
                 volumeRatios: {
                     Liter: {
                         'Liter': 1, 'Milliliter': 1000, 'Cubicmeter': 0.001, 'Cubickilometer': 0.000000000001, 'Cubiccentimeter': 1000,
@@ -351,7 +380,15 @@ window.onload = function () {
                 }
             }
         },
-        methods: {
+        watch: {
+            result: function(newValue) {
+                TweenLite.to(this.$data, 0.5, { tweenedTotal: newValue });
+            }
+        },
+        computed: {
+            animatedTotal: function() {
+                return this.tweenedTotal.toFixed(3);
+            },
             result: function () {
                 for (var type in this.volumeRatios) {
                     if (this.volumeRatios.hasOwnProperty(type)) {
@@ -384,7 +421,7 @@ window.onload = function () {
             
             <h1>Result</h1>
             <div v-if="amount && from && to">
-            <p>{{amount}} {{from}} is {{result()}} {{to}}</p>
+            <p>{{amount}} {{from}} is {{animatedTotal}} {{to}}</p>
             </div>
         </div>`
     
