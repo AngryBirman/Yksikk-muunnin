@@ -1,5 +1,7 @@
 window.onload = function () {
 
+    var stylePreference = localStorage.getItem("darkStyle");
+
     var vue = new Vue({
         el: "#converter",
         data: {
@@ -41,9 +43,19 @@ window.onload = function () {
                     document.body.classList.remove("bodyDark");
                 }
             }
+        },
+        watch: {
+            darkStyle: function() {
+                localStorage.setItem("darkStyle", vue.$data.darkStyle);
+            }
         }
     });
 
+
+    if (stylePreference === "true") {
+        vue.$data.darkStyle = localStorage.getItem("darkStyle");
+        document.body.className = "bodyDark";
+    }
 
     Vue.component('weightconverter', {
         data: function () {
