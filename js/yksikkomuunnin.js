@@ -8,7 +8,8 @@ window.onload = function () {
             type: "",
             darkAnimation: false,
             brightAnimation: false,
-            darkStyle: false
+            darkStyle: false,
+            theme: "white"
         },
         methods: {
             setType: function (type) {
@@ -47,6 +48,12 @@ window.onload = function () {
         watch: {
             darkStyle: function() {
                 localStorage.setItem("darkStyle", vue.$data.darkStyle);
+                if(vue.$data.darkStyle) {
+                    vue.$data.theme= "dark";
+                }
+                else if (!vue.$data.darkStyle) {
+                    vue.$data.theme= "white";
+                }
             }
         }
     });

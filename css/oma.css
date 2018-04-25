@@ -155,6 +155,10 @@ input, select {
     color: white;
 }
 
+.textDark {
+    color: black;
+}
+
 .backgroundToDark {
     animation: backgroundToDark 2s infinite;
 }

@@ -14,6 +14,7 @@
 <div id="converter" class="bodyLight" v-bind:class="{ converterAnimation: darkAnimation, converterBright: brightAnimation, converterDark: darkStyle }">
     <div id="converter-top" v-bind:class="{ backgroundToDark: darkAnimation, backgroundToLight: brightAnimation, converterDark: darkStyle }">
         <button class="styleButton" v-on:click="changeStyle()" v-bind:class="{ textToWhite: darkAnimation, textToBlack: brightAnimation, textBright: darkStyle }">Change style!</button>
+        <span v-bind:class="{ textBright: darkStyle, textDark: !darkStyle, textToWhite: darkAnimation, textToBlack: brightAnimation  }">theme: {{theme}}</span>
         <h1 class="header" v-bind:class="{ textToWhite: darkAnimation, textToBlack: brightAnimation, textBright: darkStyle }">Unit converter</h1>
         <p class="text" v-bind:class="{ textToWhite: darkAnimation, textToBlack: brightAnimation, textBright: darkStyle }">Choose type:</p>
         <div id="nav">
