@@ -6,6 +6,11 @@
     max-width: 230px;
 }
 
+.styleButton {
+    padding: 5px 10px 5px 10px;
+    margin-left: 12%;
+}
+
 .header {
     font-size: 1.5em;
     font-family: tahoma, sans-serif;
