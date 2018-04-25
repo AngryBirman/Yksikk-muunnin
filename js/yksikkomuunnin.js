@@ -16,19 +16,30 @@ window.onload = function () {
                 if(!this.darkStyle) {
                     this.darkAnimation = true;
                     this.darkStyle = true;
-                    document.body.style.backgroundColor = "#2d2d31";
+                    //document.body.style.backgroundColor = "#2d2d31";
+                    document.body.className = "bodyDark bodyToDark";
                 }
                 else if(this.darkStyle) {
                     this.brightAnimation = true;
                     this.darkStyle = false;
-                    document.body.style.backgroundColor = "white";
+                    document.body.className = "bodyLight bodyToLight";
                 }
                 this.$el.addEventListener("animationiteration", this.stopAnimation);
+                document.body.addEventListener("animationiteration", this.stopBody);
             },
             stopAnimation: function() {
-                //manipulatedElement.style.animationPlayState = "paused";
+
                 this.darkAnimation = false;
                 this.brightAnimation = false;
+            },
+            stopBody: function() {
+                document.body.classList.remove("bodyToDark","bodyToLight");
+                if (this.darkStyle) {
+                    document.body.classList.remove("bodyLight");
+                }
+                else {
+                    document.body.classList.remove("bodyDark");
+                }
             }
         }
     });

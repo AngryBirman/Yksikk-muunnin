@@ -134,6 +134,15 @@ input, select {
     }
 }
 
+@keyframes bodyToDark {
+    0% {
+        background: white;
+    }
+    100% {
+        background: #2d2d31;
+    }
+}
+
 .textToWhite {
     animation: blackToWhite 2s infinite;
 }
@@ -165,3 +174,20 @@ input, select {
 .converterBright {
     animation: converterAnimation 2s reverse infinite;
 }
+
+.bodyDark {
+    background: #2d2d31;
+}
+
+.bodyToDark {
+    animation: bodyToDark 2s infinite;
+}
+
+.bodyLight {
+    background: white;
+}
+
+.bodyToLight {
+    animation: bodyToDark 2s infinite reverse;
+}
+
