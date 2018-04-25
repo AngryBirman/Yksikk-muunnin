@@ -124,7 +124,7 @@ window.onload = function () {
         template: `
         <div class='input-area'>
         <h2>Weight converter</h2>
-        <p>Input number:</p>
+            <p>Input number:</p>
             <input v-model.number="amount" type="number"> <br>
             <p>Choose from weight:</p>
             <select v-model="from">
