@@ -2,7 +2,8 @@
 
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit converter</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
@@ -10,7 +11,7 @@
     <link rel="stylesheet" href="../css/oma.css">
 </head>
 <body>
-<div id="converter" v-bind:class="{ converterAnimation: darkAnimation, converterBright: brightAnimation, converterDark: darkStyle }">
+<div id="converter" class="bodyLight" v-bind:class="{ converterAnimation: darkAnimation, converterBright: brightAnimation, converterDark: darkStyle }">
     <div id="converter-top" v-bind:class="{ backgroundToDark: darkAnimation, backgroundToLight: brightAnimation, converterDark: darkStyle }">
         <button class="styleButton" v-on:click="changeStyle()" v-bind:class="{ textToWhite: darkAnimation, textToBlack: brightAnimation, textBright: darkStyle }">Change style!</button>
         <h1 class="header" v-bind:class="{ textToWhite: darkAnimation, textToBlack: brightAnimation, textBright: darkStyle }">Unit converter</h1>
