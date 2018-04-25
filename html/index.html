@@ -10,32 +10,33 @@
     <link rel="stylesheet" href="../css/oma.css">
 </head>
 <body>
-<div id="converter">
-    <div id="converter-top">
-        <h1 class="header">Unit converter</h1>
-        <p class="text">Choose type:</p>
+<div id="converter" v-bind:class="{ converterAnimation: darkAnimation, converterBright: brightAnimation, converterDark: darkStyle }">
+    <div id="converter-top" v-bind:class="{ backgroundToDark: darkAnimation, backgroundToLight: brightAnimation, converterDark: darkStyle }">
+        <button v-on:click="changeStyle()" v-bind:class="{ textToWhite: darkAnimation, textToBlack: brightAnimation, textBright: darkStyle }">Change style!</button>
+        <h1 class="header" v-bind:class="{ textToWhite: darkAnimation, textToBlack: brightAnimation, textBright: darkStyle }">Unit converter</h1>
+        <p class="text" v-bind:class="{ textToWhite: darkAnimation, textToBlack: brightAnimation, textBright: darkStyle }">Choose type:</p>
         <div id="nav">
             <ul>
-                <button v-on:click="setType('weight')">Weight</button>
-                <button v-on:click="setType('length')">Length</button>
-                <button v-on:click="setType('currency')">Currency</button>
-                <button v-on:click="setType('volume')">Volume</button>
+                <button v-on:click="setType('weight')" v-bind:class="{ textToWhite: darkAnimation, textToBlack: brightAnimation, textBright: darkStyle }">Weight</button>
+                <button v-on:click="setType('length')" v-bind:class="{ textToWhite: darkAnimation, textToBlack: brightAnimation, textBright: darkStyle }">Length</button>
+                <button v-on:click="setType('currency')" v-bind:class="{ textToWhite: darkAnimation, textToBlack: brightAnimation, textBright: darkStyle }">Currency</button>
+                <button v-on:click="setType('volume')" v-bind:class="{ textToWhite: darkAnimation, textToBlack: brightAnimation, textBright: darkStyle }">Volume</button>
             </ul>
         </div>
     </div>
     <div id="converterbody">
         <transition name="fade" mode="out-in">
         <div id="weightconverter" v-if="type === 'weight'" key="weight" class="converter">
-            <weightconverter></weightconverter>
+            <weightconverter v-bind:class="{ textToWhite: darkAnimation, textToBlack: brightAnimation, textBright: darkStyle }"></weightconverter>
         </div>
         <div id="lengthconverter" v-else-if="type === 'length'" key="length" class="converter">
-            <lengthconverter></lengthconverter>
+            <lengthconverter v-bind:class="{ textToWhite: darkAnimation, textToBlack: brightAnimation, textBright: darkStyle }"></lengthconverter>
         </div>
         <div id="currencyconverter" v-else-if="type === 'currency'" key="currency" class="converter">
-            <currencyconverter></currencyconverter>
+            <currencyconverter v-bind:class="{ textToWhite: darkAnimation, textToBlack: brightAnimation, textBright: darkStyle }"></currencyconverter>
         </div>
         <div id="volumeconverter" v-else-if="type === 'volume'" key="volume" class="converter">
-            <volumeconverter></volumeconverter>
+            <volumeconverter v-bind:class="{ textToWhite: darkAnimation, textToBlack: brightAnimation, textBright: darkStyle }"></volumeconverter>
         </div>
         </transition>
     </div>

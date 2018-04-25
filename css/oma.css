@@ -4,7 +4,6 @@
     margin: auto;
     margin-top: 10%;
     max-width: 230px;
-
 }
 
 .header {
@@ -71,4 +70,74 @@ input, select {
         height: 325px;
         top: 0px;
     }
+}
+
+@keyframes rotateAround {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes converterAnimation {
+    0% {
+        background-color: white;
+        transform: rotate(0deg);
+    }
+    100% {
+        background-color: #201942;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes backgroundToDark {
+    0% {
+        background-color: white;
+    }
+    100% {
+        background-color: #201942;
+    }
+}
+
+@keyframes blackToWhite {
+    0% {
+        color: black;
+    }
+    100% {
+        color: white;
+    }
+}
+
+.textToWhite {
+    animation: blackToWhite 2s infinite;
+}
+
+.textToBlack {
+    animation: blackToWhite 2s infinite reverse;
+}
+
+.textBright {
+    color: white;
+}
+
+.backgroundToDark {
+    animation: backgroundToDark 2s infinite;
+}
+
+.backgroundToLight {
+    animation: backgroundToDark 2s infinite reverse;
+}
+
+.converterAnimation {
+    animation: converterAnimation 2s infinite;
+}
+
+.converterDark {
+    background: #201942 !important;
+}
+
+.converterBright {
+    animation: converterAnimation 2s reverse infinite;
 }

@@ -3,14 +3,36 @@ window.onload = function () {
     var vue = new Vue({
         el: "#converter",
         data: {
-            type: ""
+            type: "",
+            darkAnimation: false,
+            brightAnimation: false,
+            darkStyle: false
         },
         methods: {
             setType: function (type) {
                 this.type = type;
+            },
+            changeStyle: function() {
+                if(!this.darkStyle) {
+                    this.darkAnimation = true;
+                    this.darkStyle = true;
+                    document.body.style.backgroundColor = "#2d2d31";
+                }
+                else if(this.darkStyle) {
+                    this.brightAnimation = true;
+                    this.darkStyle = false;
+                    document.body.style.backgroundColor = "white";
+                }
+                this.$el.addEventListener("animationiteration", this.stopAnimation);
+            },
+            stopAnimation: function() {
+                //manipulatedElement.style.animationPlayState = "paused";
+                this.darkAnimation = false;
+                this.brightAnimation = false;
             }
         }
     });
+
 
     Vue.component('weightconverter', {
         data: function () {
