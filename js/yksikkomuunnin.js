@@ -168,6 +168,9 @@ window.onload = function () {
             <option v-for='value in types' v-bind:value=value>{{value}}</option>
             </select> <br>
             <h1>Result</h1>
+            <div v-if="animatedTotal < 0.00001 && amount && from && to">
+            <p>The number is too small for comparison. Please increase the amount.</p> 
+            </div>
             <div v-if="amount && from && to">
             <p>{{amount}} {{from}} is {{animatedTotal}} {{to}}</p>
             </div>
@@ -276,6 +279,9 @@ window.onload = function () {
             <option v-for='value in types' v-bind:value=value>{{value}}</option>
             </select> <br>
             <h1>Result</h1>
+            <div v-if="animatedTotal < 0.00001 && amount && from && to">
+            <p>The number is too small for comparison. Please increase the amount.</p> 
+            </div>
             <div v-if="amount && from && to">
             <p>{{amount}} {{from}} is {{animatedTotal}} {{to}}</p>
             </div>
@@ -365,6 +371,9 @@ window.onload = function () {
             <option v-for='value in types' v-bind:value=value>{{value}}</option>
             </select> <br>
             <h1>Result</h1>
+            <div v-if="animatedTotal < 0.00001 && amount && from && to">
+            <p>The number is too small for comparison. Please increase the amount.</p> 
+            </div>
             <div v-if="amount && from && to">
             <p>{{amount}} {{from}} is {{animatedTotal}} {{to}}</p>
             </div>
@@ -475,6 +484,9 @@ window.onload = function () {
             </select> <br>
             
             <h1>Result</h1>
+            <div v-if="animatedTotal < 0.00001 && amount && from && to">
+            <p>The number is too small for comparison. Please increase the amount.</p> 
+            </div>
             <div v-if="amount && from && to">
             <p>{{amount}} {{from}} is {{animatedTotal}} {{to}}</p>
             </div>
