@@ -116,11 +116,14 @@ window.onload = function () {
                         'Kilogram': 6.35029, 'Ton': 0.00635029, 'Gram': 6350.29, 'Milligram': 6350290, 'Microgram': 6350290000,
                         'ImperialTon': 0.00625, 'USTon': 0.007, 'Stone': 1, 'Pound': 14, 'Ounce': 224
                     },
-                    Pound: {
+                    Ounce: {
                         'Kilogram': 0.0283495, 'Ton': 0.0000283495, 'Gram': 28.3495, 'Milligram': 28349.5, 'Microgram': 28349500,
                         'ImperialTon': 0.000027902, 'USTon': 0.00003125, 'Stone': 0.00446429, 'Pound': 0.0625, 'Ounce': 1
                     },
-                    Ounce: {},
+                    Pound: {'Kilogram': 0.4535924, 'Ton': 0.0004535924, 'Gram': 453.59239999958, 'Milligram': 453592.39, 'Microgram': 453592399.9,
+                    'ImperialTon': 0.0004464, 'USTon': 0.0005, 'Stone': 0.071428578177, 'Pound': 1, 'Ounce': 16.000002821916
+
+                    },
 
                 }
             }
