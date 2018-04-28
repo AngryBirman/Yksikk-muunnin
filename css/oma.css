@@ -3,17 +3,18 @@
     border: 2px solid grey;
     box-shadow: -3px 5px 3px rgba(0,0,0,0.7);
     margin: auto;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+    top: 10em;
     width: 400px;
-    position: absolute;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .styleButton {
     padding: 5px 10px 5px 10px;
     margin-left: 20%;
-    margin-top: 15px;
+    margin-top: 5%;
 }
 
 .header {
@@ -31,6 +32,7 @@ h1 {
 
 .theme {
     font-family: tahoma, sans-serif;
+    margin-left: 5%;
 }
 
 .text {
@@ -65,12 +67,8 @@ input, select {
 }
 
 .input-area {
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
-#lengthconverter, #currencyconverter, #volumeconverter, #weightconverter {
-    font-family: tahoma bold, sans-serif;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 #converter-top {
@@ -83,6 +81,7 @@ input, select {
     position: relative;
     z-index: 1;
     overflow: hidden;
+    font-family: tahoma, sans-serif;
 }
 
 .fade-enter-active  {
@@ -116,11 +115,11 @@ input, select {
 @keyframes converterAnimation {
     0% {
         background-color: white;
-        transform: translate(-50%, -50%) rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
         background-color: #1d3051;
-        transform: translate(-50%, -50%) rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
@@ -201,4 +200,19 @@ input, select {
 
 .bodyToLight {
     animation: bodyToDark 2s infinite reverse;
+}
+
+@media screen and (max-width: 767px) {
+    #converter {
+        width: 300px;
+    }
+
+    #nav {
+        width: 70%;
+        margin: auto;
+    }
+
+    .styleButton {
+        margin-left: 5%;
+    }
 }
