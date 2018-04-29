@@ -295,9 +295,13 @@ window.onload = function () {
                     usdollar: 'USDollar',
                     euro: 'Euro',
                     britishpound: 'BritishPound',
+                    swedishkrona: 'SwedishKrona',
+                    russianruble: 'RussianRuble',
+                    danishkrone: 'DanishKrone',
+                    czechkoruna: 'CzechKoruna',
                     indianrupee: 'IndianRupee',
                     australiandollar: 'AustralianDollar',
-                    canadiandollar: 'CanadianDollar',
+                    canadiandollar: 'CanadianDollar'
                 },
                 amount: "",
                 from: "",
@@ -305,27 +309,43 @@ window.onload = function () {
                 tweenedTotal: 0,
                 currencyRatios: {
                     USDollar: {
-                        'USDollar': 1, 'Euro': 0.81366, 'BritishPound': 0.71385, 'IndianRupee': 66.1140, 'AustralianDollar': 1.30303,
+                        'USDollar': 1, 'Euro': 0.81366, 'BritishPound': 0.71385, 'SwedishKrona': 8.67450, 'RussianRuble': 61.9701, 'DanishKrone': 6.14302, 'CzechKoruna': 20.9890, 'IndianRupee': 66.1140, 'AustralianDollar': 1.30303,
                         'CanadianDollar': 1.27590
                     },
                     Euro: {
-                        'USDollar': 1.22841, 'Euro': 1, 'BritishPound': 0.87707, 'IndianRupee': 81.2151, 'AustralianDollar': 1.60101,
+                        'USDollar': 1.22841, 'Euro': 1, 'BritishPound': 0.87707, 'SwedishKrona': 10.5216, 'RussianRuble': 75.1636, 'DanishKrone': 7.45088, 'CzechKoruna': 25.4576, 'IndianRupee': 81.2151, 'AustralianDollar': 1.60101,
                         'CanadianDollar': 1.56733
                     },
                     BritishPound: {
-                        'USDollar': 1.39996, 'Euro': 1.13886, 'BritishPound': 1, 'IndianRupee': 92.5570, 'AustralianDollar': 1.82419,
+                        'USDollar': 1.39996, 'Euro': 1.13886, 'BritishPound': 1, 'SwedishKrona': 11.9495, 'RussianRuble': 85.3637, 'DanishKrone': 8.46201, 'CzechKoruna': 28.9123, 'IndianRupee': 92.5570, 'AustralianDollar': 1.82419,
                         'CanadianDollar': 1.78621
                     },
+                    SwedishKrona: {
+                        'USDollar': 0.11530, 'Euro': 0.0950679, 'BritishPound': 0.0837005, 'SwedishKrona': 1, 'RussianRuble': 85.3637, 'DanishKrone': 0.708149, 'CzechKoruna': 2.41955, 'IndianRupee': 7.67869, 'AustralianDollar': 0.152092,
+                        'CanadianDollar': 0.147857
+                    },
+                    RussianRuble: {
+                        'USDollar': 0.0161368, 'Euro': 0.0133053, 'BritishPound': 0.0117142, 'SwedishKrona': 0.139983, 'RussianRuble': 1, 'DanishKrone': 0.0991289, 'CzechKoruna': 0.338696, 'IndianRupee': 1.07468, 'AustralianDollar': 0.0212860,
+                        'CanadianDollar': 0.0206977
+                    },
+                    DanishKrone: {
+                        'USDollar': 0.162788, 'Euro': 0.134186, 'BritishPound': 0.118170, 'SwedishKrona': 1.41215, 'RussianRuble': 10.0879, 'DanishKrone': 1, 'CzechKoruna': 3.41672, 'IndianRupee': 10.8412, 'AustralianDollar': 0.214733,
+                        'CanadianDollar': 0.208798
+                    },
+                    CzechKoruna: {
+                        'USDollar': 0.0476440, 'Euro': 0.0392729, 'BritishPound': 0.0345855, 'SwedishKrona': 0.413307, 'RussianRuble': 2.95250, 'DanishKrone': 0.292679, 'CzechKoruna': 1, 'IndianRupee': 3.17296, 'AustralianDollar': 0.0628470,
+                        'CanadianDollar': 0.0611101
+                    },
                     IndianRupee: {
-                        'USDollar': 0.01507, 'Euro': 0.01226, 'BritishPound': 0.01076, 'IndianRupee': 1, 'AustralianDollar': 0.01963,
+                        'USDollar': 0.01507, 'Euro': 0.01226, 'BritishPound': 0.01076, 'SwedishKrona': 0.130262, 'RussianRuble': 0.930539, 'DanishKrone': 0.0922434, 'CzechKoruna': 0.315169, 'IndianRupee': 1, 'AustralianDollar': 0.01963,
                         'CanadianDollar': 0.01923
                     },
                     AustralianDollar: {
-                        'USDollar': 0.76664, 'Euro': 0.62383, 'BritishPound': 0.54726, 'IndianRupee': 50.6856, 'AustralianDollar': 1,
+                        'USDollar': 0.76664, 'Euro': 0.62383, 'BritishPound': 0.54726, 'SwedishKrona': 6.57669, 'RussianRuble': 46.9813, 'DanishKrone': 4.65721, 'CzechKoruna': 15.9124, 'IndianRupee': 50.6856, 'AustralianDollar': 1,
                         'CanadianDollar': 0.97816
                     },
                     CanadianDollar: {
-                        'USDollar': 0.78284, 'Euro': 0.63697, 'BritishPound': 0.55883, 'IndianRupee': 51.7567, 'AustralianDollar': 1.02007,
+                        'USDollar': 0.78284, 'Euro': 0.63697, 'BritishPound': 0.55883, 'SwedishKrona': 6.76443, 'RussianRuble': 48.3225, 'DanishKrone': 4.79022, 'CzechKoruna': 16.3668, 'IndianRupee': 51.7567, 'AustralianDollar': 1.02007,
                         'CanadianDollar': 1
                     },
                 }
