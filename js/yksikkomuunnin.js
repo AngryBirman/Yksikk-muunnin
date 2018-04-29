@@ -19,7 +19,6 @@ window.onload = function () {
                 if(!this.darkStyle) {
                     this.darkAnimation = true;
                     this.darkStyle = true;
-                    //document.body.style.backgroundColor = "#2d2d31";
                     document.body.className = "bodyDark bodyToDark";
                 }
                 else if(this.darkStyle) {
